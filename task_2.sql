@@ -26,17 +26,17 @@ CREATE TABLE Orders (
     order_id INT PRIMARY KEY AUTO_INCREMENT,
     customer_id INT NOT NULL,
     order_date DATE NOT NULL,
-    FOREIGN KEY (customer_id) REFERENCES CUSTOMERS(customer_id) ON DELETE RESTRICT,
+    FOREIGN KEY (customer_id) REFERENCES Customers(customer_id) ON DELETE RESTRICT,
     INDEX idx_customer_id (customer_id)
 );
 
 CREATE TABLE Order_Details (
-    ORDERDETAILID INT PRIMARY KEY AUTO_INCREMENT,
-    ORDER_ID INT NOT NULL,
-    BOOK_ID INT NOT NULL,
-    QUANTITY DOUBLE NOT NULL,
-    FOREIGN KEY (ORDER_ID) REFERENCES ORDERS(ORDER_ID) ON DELETE RESTRICT,
-    FOREIGN KEY (BOOK_ID) REFERENCES BOOKS(BOOK_ID) ON DELETE RESTRICT,
-    INDEX idx_order_id (ORDER_ID),
-    INDEX idx_book_id (BOOK_ID)
+    order_Details_ID INT PRIMARY KEY AUTO_INCREMENT,
+    order_id INT NOT NULL,
+    book_id INT NOT NULL,
+    quantity DOUBLE NOT NULL,
+    FOREIGN KEY (order_id) REFERENCES Orders(order_id) ON DELETE RESTRICT,
+    FOREIGN KEY (book_id) REFERENCES Books(book_id) ON DELETE RESTRICT,
+    INDEX idx_order_id (order_id),
+    INDEX idx_book_id (book_id)
 );

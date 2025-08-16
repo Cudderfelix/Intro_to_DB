@@ -15,7 +15,7 @@ try:
         cursor.execute("CREATE DATABASE IF NOT EXISTS alx_book_store")
         print("Database 'alx_book_store' created successfully!")
         
-except Error as e:
+except mysql.connector.Error as e:
     if e.errno == mysql.connector.errorcode.ER_ACCESS_DENIED_ERROR:
         print("Error: Invalid username or password. Please check your credentials.")
     elif e.errno == mysql.connector.errorcode.ER_HOST_NOT_FOUND:

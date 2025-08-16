@@ -38,7 +38,7 @@ CREATE TABLE Order_Details (
     book_id INT NOT NULL,
     quantity DOUBLE NOT NULL,
     FOREIGN KEY (order_id) REFERENCES Orders(order_id) ON DELETE RESTRICT,
-    FOREIGN KEY (book_id) REFERENCES Books(order_id) ON DELETE RESTRICT,
+    FOREIGN KEY (book_id) REFERENCES Books(book_id_id) ON DELETE RESTRICT,
     INDEX idx_order_id (order_id),
     INDEX idx_book_id (book_id)
 );

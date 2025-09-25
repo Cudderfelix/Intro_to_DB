@@ -32,7 +32,7 @@ CREATE TABLE Orders (
     INDEX idx_customer_id (customer_id)
 );
 
-CREATE TABLE Order_Details (
+CEATE TABLE Order_Details (
     ORDERDETAILID INT PRIMARY KEY AUTO_INCREMENT,
     order_id INT NOT NULL,
     book_id INT NOT NULL,

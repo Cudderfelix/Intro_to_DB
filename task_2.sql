@@ -1,6 +1,6 @@
 USE alx_book_store;
 
-REATE TABLE Authors (
+CREATE TABLE Authors (
     author_id INT PRIMARY KEY AUTO_INCREMENT,
     author_name VARCHAR(215) NOT NULL
 );

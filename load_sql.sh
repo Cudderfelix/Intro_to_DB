@@ -4,7 +4,7 @@ DB_USER="alx_client"
 DB_PASS="alx_pass"
 CONTAINER="my-mysql"
 
-for sql_file in *.sql; do
+for sql_file in * .sql; do
     echo "Loading $sql_file..."
-    docker exec -i $CONTAINER mysql -u$alx_client -p$alx_pass alx_book_store < "$subscribers.sql"
+    docker exec -i $CONTAINER mysql -u$DB_USER -p$DB_PASS $DB_NAME < "$sql_file"
 done

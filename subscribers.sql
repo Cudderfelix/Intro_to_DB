@@ -12,4 +12,5 @@ VALUES
     ('Henry', 'Taylor', 'henry.taylor@example.com', '2023-10-25', 'enterprise', 'inactive'),
     ('Ivy', 'Moore', 'ivy.moore@example.com', '2023-11-08', 'premium', 'active'),
     ('Jack', 'Jackson', 'jack.jackson@example.com', '2023-12-19', 'basic', 'active'),
-    ('Averi', 'Manigan', 'averi.manigan@example.com', '2023-10-12','enterprise', 'active');
+    ('Averi', 'Manigan', 'averi.manigan@example.com', '2023-10-12','enterprise', 'active'),
+    ('Janet', 'Jackson', 'janetjackson@example.com', '2024-10-21;,);
